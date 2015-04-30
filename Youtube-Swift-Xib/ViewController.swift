@@ -23,9 +23,17 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapModal() {
-        var modalController = ModalController(nibName: "ModalController", bundle: nil)
+        var modalController:ModalController = ModalController(nibName: "ModalController", bundle: nil)
+        self.navigationController?.presentViewController(modalController, animated: true, completion: nil)
+        //presentViewController(modalController, animated: true, completion: nil)
         
-        presentViewController(modalController, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func didTapVideo() {
+        var modalController:inlinePlayerViewController = inlinePlayerViewController(nibName: "inlinePlayerViewController", bundle: nil)
+        self.navigationController?.presentViewController(modalController, animated: true, completion: nil)
+    }
+
 }
 
